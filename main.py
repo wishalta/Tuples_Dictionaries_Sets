@@ -306,25 +306,86 @@ from traceback import print_tb
 # kiekių vidurkį (kiek vidutiniškai turima prekių). O tos prekės kurios likę
 # mažiausiai vienetų išvesti pavadinimą ir kiekį.
 
-dictionary = {
-    'mangos': 34,
-    'bananas': 54,
-    'apples': 20,
-    'oranges': 54,
-    'grapes': 228,
-    'coconuts':12
+# dictionary = {
+#     'mangos': 34,
+#     'bananas': 54,
+#     'apples': 20,
+#     'oranges': 54,
+#     'grapes': 228,
+#     'coconuts':12
+# }
+#
+# for i, x in dictionary.items():
+#     print(f'{i} product, we have {x} units' )
+#
+# sum = 0
+# count = 0
+# for item, amount in dictionary.items():
+#     sum += amount
+#     count += 1
+#
+# print(f'Is viso yra: {sum}')
+# print(f'Vidurkis prekiu: {sum / count}')
+#
+# print(min(dictionary, key=dictionary.get)) #SURANDA MAZIAUSIA REIKSME
+
+# 10
+
+# 10.Susikurkite dictionary darbuotojo informacijai saugoti. Nurodykite tokias
+# savybes: vardas ir pavardė, telefonas, profesija, etatas, atlyginimas. Taip
+# pat, sukurkite dar vieną darbuotojo dictionary, tačiau nenurodykite 1-os
+# ar 2-ų savybių, pvz, praleiskite profesiją.
+# Parašykite tokią programą, kuri
+# galėtų išsiaiškinti kurios(-ių) savybių nėra antrame dictionary, kurios yra
+# pirmame, pvz jeigu nėra profesijos, tai programa išsiaiškintų, kad nėra
+# nurodyta profesija antrame dictionary. Padarykite taip, kad vartotojas
+# turėtų galimybę suvesti trūkstamas savybes.
+
+dar1 = {
+    "vardas": "Tomas",
+    "pavardė": "Petraitis",
+    "telefonas": "+370 612 34567",
+    "profesija": "Programuotojas",
+    "etatas": "Pilna darbo diena",
+    "atlyginimas": 2500
 }
 
-for i, x in dictionary.items():
-    print(f'{i} product, we have {x} units' )
+dar2 = {
+    "vardas": "Laura",
+    "pavardė": "Zablockytė",
+    "telefonas": "+370 698 76543",
+    "etatas": "Pusė darbo dienos",
+    "atlyginimas": 1200
+}
 
-sum = 0
-count = 0
-for item, amount in dictionary.items():
-    sum += amount
-    count += 1
+for key in dar1:
+    if key in dar2:
+        continue
+    else:
+        print(f'Nera sios reiksmes, antram dictionary: {key}')
+        if key == dar1['atlyginimas']:
+            print(f'Papildykite {key}')
+            reiksme = input(int('Jusu skaicus: '))
+            dar2[key] = reiksme
+        else:
+            print(f'Papildykite {key}')
+            reiksme = input('Jusu duomenys: ')
+            dar2[key] = reiksme
 
-print(f'Is viso yra: {sum}')
-print(f'Vidurkis prekiu: {sum / count}')
+for key in dar2:
+    if key in dar1:
+        continue
+    else:
+        print(f'Nera sios reiksmes, antram dictionary: {key}')
+        if key == dar2['atlyginimas']:
+            print(f'Papildykite {key}')
+            reiksme = input(int('Jusu skaicus: '))
+            dar1[key] = reiksme
+        else:
+            print(f'Papildykite {key}')
+            reiksme = input('Jusu duomenys: ')
+            dar1[key] = reiksme
 
-print(min(dictionary, key=dictionary.get)) #SURANDA MAZIAUSIA REIKSME
+print(dar1)
+print(dar2)
+# 11
