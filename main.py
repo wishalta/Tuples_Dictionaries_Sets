@@ -341,51 +341,129 @@ from traceback import print_tb
 # nurodyta profesija antrame dictionary. Padarykite taip, kad vartotojas
 # turėtų galimybę suvesti trūkstamas savybes.
 
-dar1 = {
-    "vardas": "Tomas",
-    "pavardė": "Petraitis",
-    "telefonas": "+370 612 34567",
-    "profesija": "Programuotojas",
-    "etatas": "Pilna darbo diena",
-    "atlyginimas": 2500
-}
+# dar1 = {
+#     "vardas": "Tomas",
+#     "pavardė": "Petraitis",
+#     "telefonas": "+370 612 34567",
+#     "profesija": "Programuotojas",
+#     "etatas": "Pilna darbo diena",
+#     "atlyginimas": 2500
+# }
+#
+# dar2 = {
+#     "vardas": "Laura",
+#     "pavardė": "Zablockytė",
+#     "telefonas": "+370 698 76543",
+#     "etatas": "Pusė darbo dienos",
+#     "atlyginimas": 1200
+# }
+#
+# for key in dar1:
+#     if key in dar2:
+#         continue
+#     else:
+#         print(f'Nera sios reiksmes, antram dictionary: {key}')
+#         if key == dar1['atlyginimas']:
+#             print(f'Papildykite {key}')
+#             reiksme = input(int('Jusu skaicus: '))
+#             dar2[key] = reiksme
+#         else:
+#             print(f'Papildykite {key}')
+#             reiksme = input('Jusu duomenys: ')
+#             dar2[key] = reiksme
+#
+# for key in dar2:
+#     if key in dar1:
+#         continue
+#     else:
+#         print(f'Nera sios reiksmes, antram dictionary: {key}')
+#         if key == dar2['atlyginimas']:
+#             print(f'Papildykite {key}')
+#             reiksme = input(int('Jusu skaicus: '))
+#             dar1[key] = reiksme
+#         else:
+#             print(f'Papildykite {key}')
+#             reiksme = input('Jusu duomenys: ')
+#             dar1[key] = reiksme
+#
+# print(dar1)
+# print(dar2)
 
-dar2 = {
-    "vardas": "Laura",
-    "pavardė": "Zablockytė",
-    "telefonas": "+370 698 76543",
-    "etatas": "Pusė darbo dienos",
-    "atlyginimas": 1200
-}
-
-for key in dar1:
-    if key in dar2:
-        continue
-    else:
-        print(f'Nera sios reiksmes, antram dictionary: {key}')
-        if key == dar1['atlyginimas']:
-            print(f'Papildykite {key}')
-            reiksme = input(int('Jusu skaicus: '))
-            dar2[key] = reiksme
-        else:
-            print(f'Papildykite {key}')
-            reiksme = input('Jusu duomenys: ')
-            dar2[key] = reiksme
-
-for key in dar2:
-    if key in dar1:
-        continue
-    else:
-        print(f'Nera sios reiksmes, antram dictionary: {key}')
-        if key == dar2['atlyginimas']:
-            print(f'Papildykite {key}')
-            reiksme = input(int('Jusu skaicus: '))
-            dar1[key] = reiksme
-        else:
-            print(f'Papildykite {key}')
-            reiksme = input('Jusu duomenys: ')
-            dar1[key] = reiksme
-
-print(dar1)
-print(dar2)
 # 11
+
+# 11.Kaimynystėje yra trys kepyklos, apie kiekvieną yra žinoma ši informacija:
+# pavadinimas; darbuotojų kiekis; adresas; praeitos savaitės iškeptų kepinių
+# kiekiai (sąrašas su 7-iais elementais, kur nurodyti atskiri kepinių kiekiai).
+# Susikurkite dictionaries kiekvienai kepyklai.
+# Jeigu vienas kepinys
+# parduodamas už 1.5 euro, raskite kuri kepykla galėjo būti pelningiausia.
+# Taip pat, išsiaiškinkite kiek vidutiniškai kiekviena kepykla per dieną
+# pagamina kepinių, raskite kurios kepyklos vidurkis mažiausias.
+
+kepykla1 = {
+    "darbuotojų kiekis": 10,
+    "adresas": "Gedimino pr. 1, Vilnius",
+    "kiekiai per savaite": {'Spurgos': 10,
+                'Sumustiniai': 20,
+                'Kruasanas': 30,
+                'Bandeles su aguonomis': 10,
+                'Bandele su persikais': 15,
+                'Bandele su sokoladu': 25,
+                'Sausainiai': 35
+                }
+}
+
+kepykla2 = {
+    "darbuotojų kiekis": 15,
+    "adresas": "Laisvės al. 10, Kaunas",
+    "kiekiai per savaite": {'Spurgos': 30,
+                'Sumustiniai': 10,
+                'Kruasanas': 35,
+                'Bandeles su aguonomis': 25,
+                'Bandele su persikais': 15,
+                'Bandele su sokoladu': 55,
+                'Sausainiai': 25
+                }
+}
+
+kepykla3 = {
+    "darbuotojų kiekis": 20,
+    "adresas": "Taikos pr. 50, Klaipėda",
+    "kiekiai per savaite": {'Spurgos': 50,
+                'Sumustiniai': 30,
+                'Kruasanas': 40,
+                'Bandeles su aguonomis': 55,
+                'Bandele su persikais': 25,
+                'Bandele su sokoladu': 50,
+                'Sausainiai': 35
+                }
+}
+
+
+k1 = sum(kepykla1["kiekiai per savaite"].values())
+k2 = sum(kepykla2["kiekiai per savaite"].values())
+k3 = sum(kepykla3["kiekiai per savaite"].values())
+
+if k1 * 1.5 > k2 * 1.5 > k3 * 1.5:
+    print(f'Pirma kepykla wins: {k1*1.5} kiekiu')
+if k1 * 1.5 > k3 * 1.5 > k2 * 1.5:
+    print(f'Pirma kepykla wins: {k2*1.5} kiekiu')
+if k3 * 1.5 > k2 * 1.5:
+    print(f'Trecia kepykla wins: {k3*1.5} kiekiu')
+else:
+    print(f'Antra kepykla wins: {k2*1.5} kiekiu')
+
+print(f'Pirmos kepyklos vidurkis, pagamintu bandeliu per diena: {k1 / 5}')
+print(f'Pirmos kepyklos vidurkis, pagamintu bandeliu per diena: {k2 / 5}')
+print(f'Pirmos kepyklos vidurkis, pagamintu bandeliu per diena: {k3 / 5}')
+
+v1 = k1 / 5
+v2 = k2 / 5
+v3 = k3 / 5
+
+if v1 < v2 and v1 < v3:
+    print(f'Pirma maziausiai: {v1}')
+elif v2 < v3 and v2 < v1:
+    print(f'Antra maziausiai: {v2}')
+elif v3 < v2 and v3 < v1:
+    print(f'Trecia maziausiai: {v3}')
