@@ -52,6 +52,8 @@
 # 2
 
 import datetime
+from traceback import print_tb
+
 #
 # filmas = {
 #     'Pavadinimas': 'The Substance',
@@ -191,22 +193,138 @@ import datetime
 
 # 5
 
-automobilis = {}
-
-automobilis["marke"] = "Toyota"
-automobilis["modelis"] = "Supra mk4"
-automobilis["rida"] = 85600
-automobilis["gamybos_metai"] = 1993
-automobilis["spalva"] = "juoda"
-automobilis["darbinis_turis"] = 3.0
-automobilis["ar_dauzta"] = False
-automobilis["ar_parduodama"] = True
-
-print(automobilis)
-
-metu = datetime.date.today().year - automobilis['gamybos_metai']
-print(f"Metų skaičius nuo pagaminimo: {metu}")
-
-print(f'Vidutiniskai masina nuvaziavo per metus: {automobilis["rida"] / metu} kilometru')
+# automobilis = {}
+#
+# automobilis["marke"] = "Toyota"
+# automobilis["modelis"] = "Supra mk4"
+# automobilis["rida"] = 85600
+# automobilis["gamybos_metai"] = 1993
+# automobilis["spalva"] = "juoda"
+# automobilis["darbinis_turis"] = 3.0
+# automobilis["ar_dauzta"] = False
+# automobilis["ar_parduodama"] = True
+#
+# print(automobilis)
+#
+# metu = datetime.date.today().year - automobilis['gamybos_metai']
+# print(f"Metų skaičius nuo pagaminimo: {metu}")
+#
+# print(f'Vidutiniskai masina nuvaziavo per metus: {automobilis["rida"] / metu} kilometru')
 
 # 6
+#
+# automobilis = {}
+#
+# automobilis["marke"] = "Toyota"
+# automobilis["modelis"] = "Supra mk4"
+# automobilis["rida"] = 85600
+# automobilis["gamybos_metai"] = 1993
+# automobilis["spalva"] = "juoda"
+# automobilis["darbinis_turis"] = 3.0
+# automobilis["ar_dauzta"] = False
+# automobilis["ar_parduodama"] = True
+#
+# print(f' It\'s crazy {automobilis['marke'], automobilis['modelis']}')
+
+# 7
+#
+# bookstore_info = {
+#     "pavadinimas": "Knygų pasaulis",
+#     "adresass": "Vilniaus g. 10, Vilnius",
+#     "plotas_kv_m": 120,
+#     "kiek_knygų": 3000,
+#     "darbo_valandos": {
+#         "pirmadienis": "10:00 - 18:00",
+#         "antradienis": "10:00 - 18:00",
+#         "trečiadienis": "10:00 - 18:00",
+#         "ketvirtadienis": "10:00 - 18:00",
+#         "penktadienis": "10:00 - 20:00",
+#         "šeštadienis": "10:00 - 18:00",
+#         "sekmadienis": "uždaryta"
+#     },
+#     "ar_atidarytas": True
+# }
+#
+# for key in bookstore_info:
+#     print(key, ':', bookstore_info[key])
+
+# Išveskite šio knygyno
+# dictionary raktus su reikšmėmis.
+
+# 8
+
+# Raskite abiejų studentų pažymių
+# vidurkius. Išveskite abiejų studentų informaciją, bei pažymių vidurkius.
+# Raskite ir išveskite, kurio studento pažymių vidurkis yra didesnis ir
+# išveskite jo vardą su pavarde.
+
+# student1 = {
+#     "vardas": "Jonas",
+#     "pavardė": "Jonaitis",
+#     "studijų_programa": "Informatika",
+#     "pažymiai": [4, 7, 9, 8 , 10, 4]
+# }
+#
+# student2 = {
+#     "vardas": "Aistė",
+#     "pavardė": "Paliulytė",
+#     "studijų_programa": "Verslo vadyba",
+#     "pažymiai": [9, 8, 7, 10, 5, 6]
+# }
+# count1 = 0
+# count2 = 0
+#
+# for grade in student1['pažymiai']:
+#     count1 += grade
+#
+# for grade in student2['pažymiai']:
+#     count2 += grade
+#
+# # print(f'Pirmo vidurkis: {count1 / len(student1['pažymiai'])}')
+# # print(f'Pirmo vidurkis: {count2 / len(student2['pažymiai'])}')
+#
+# student1['vidurkis'] = count1 / len(student1['pažymiai'])
+# student2['vidurkis'] = count2 / len(student2['pažymiai'])
+#
+# print(student1)
+# print(student2)
+#
+# if student1['vidurkis'] > student2['vidurkis']:
+#     print(f'{student1['vardas'], student1['pavardė']} vidurkis didesnis')
+# if student1['vidurkis'] < student2['vidurkis']:
+#     print(f'{student2['vardas'], student2['pavardė']} vidurkis didesnis')
+
+# 9
+
+# Susikurkite dictionary, kuriame būtų nurodytos prekės ir turimi kiekiai, t.y.
+# raktas yra prekės pavadinimas ir reikšmė yra turimas prekės kiekis, o visa
+# tai saugoma viename dictionary (panašu į 29 pavyzdį). Išveskite visą
+# turimą dictionary informaciją gražiai suformatuotai, pvz: '- Prekės
+# "Pieštukas" liko 132 vnt.' ir tai padaryti atskirose eilutėse.
+# Taip pat, raskite
+# ir išveskite visų prekių bendrą turimą kiekį (sudėti visus turimus kiekius),
+# kiekių vidurkį (kiek vidutiniškai turima prekių). O tos prekės kurios likę
+# mažiausiai vienetų išvesti pavadinimą ir kiekį.
+
+dictionary = {
+    'mangos': 34,
+    'bananas': 54,
+    'apples': 20,
+    'oranges': 54,
+    'grapes': 228,
+    'coconuts':12
+}
+
+for i, x in dictionary.items():
+    print(f'{i} product, we have {x} units' )
+
+sum = 0
+count = 0
+for item, amount in dictionary.items():
+    sum += amount
+    count += 1
+
+print(f'Is viso yra: {sum}')
+print(f'Vidurkis prekiu: {sum / count}')
+
+print(min(dictionary, key=dictionary.get)) #SURANDA MAZIAUSIA REIKSME
