@@ -400,70 +400,188 @@ from traceback import print_tb
 # Taip pat, išsiaiškinkite kiek vidutiniškai kiekviena kepykla per dieną
 # pagamina kepinių, raskite kurios kepyklos vidurkis mažiausias.
 
-kepykla1 = {
-    "darbuotojų kiekis": 10,
-    "adresas": "Gedimino pr. 1, Vilnius",
-    "kiekiai per savaite": {'Spurgos': 10,
-                'Sumustiniai': 20,
-                'Kruasanas': 30,
-                'Bandeles su aguonomis': 10,
-                'Bandele su persikais': 15,
-                'Bandele su sokoladu': 25,
-                'Sausainiai': 35
-                }
-}
+# kepykla1 = {
+#     "darbuotojų kiekis": 10,
+#     "adresas": "Gedimino pr. 1, Vilnius",
+#     "kiekiai per savaite": {'Spurgos': 10,
+#                 'Sumustiniai': 20,
+#                 'Kruasanas': 30,
+#                 'Bandeles su aguonomis': 10,
+#                 'Bandele su persikais': 15,
+#                 'Bandele su sokoladu': 25,
+#                 'Sausainiai': 35
+#                 }
+# }
+#
+# kepykla2 = {
+#     "darbuotojų kiekis": 15,
+#     "adresas": "Laisvės al. 10, Kaunas",
+#     "kiekiai per savaite": {'Spurgos': 30,
+#                 'Sumustiniai': 10,
+#                 'Kruasanas': 35,
+#                 'Bandeles su aguonomis': 25,
+#                 'Bandele su persikais': 15,
+#                 'Bandele su sokoladu': 55,
+#                 'Sausainiai': 25
+#                 }
+# }
+#
+# kepykla3 = {
+#     "darbuotojų kiekis": 20,
+#     "adresas": "Taikos pr. 50, Klaipėda",
+#     "kiekiai per savaite": {'Spurgos': 50,
+#                 'Sumustiniai': 30,
+#                 'Kruasanas': 40,
+#                 'Bandeles su aguonomis': 55,
+#                 'Bandele su persikais': 25,
+#                 'Bandele su sokoladu': 50,
+#                 'Sausainiai': 35
+#                 }
+# }
+#
+#
+# k1 = sum(kepykla1["kiekiai per savaite"].values())
+# k2 = sum(kepykla2["kiekiai per savaite"].values())
+# k3 = sum(kepykla3["kiekiai per savaite"].values())
+#
+# if k1 * 1.5 > k2 * 1.5 > k3 * 1.5:
+#     print(f'Pirma kepykla wins: {k1*1.5} kiekiu')
+# if k1 * 1.5 > k3 * 1.5 > k2 * 1.5:
+#     print(f'Pirma kepykla wins: {k2*1.5} kiekiu')
+# if k3 * 1.5 > k2 * 1.5:
+#     print(f'Trecia kepykla wins: {k3*1.5} kiekiu')
+# else:
+#     print(f'Antra kepykla wins: {k2*1.5} kiekiu')
+#
+# print(f'Pirmos kepyklos vidurkis, pagamintu bandeliu per diena: {k1 / 5}')
+# print(f'Pirmos kepyklos vidurkis, pagamintu bandeliu per diena: {k2 / 5}')
+# print(f'Pirmos kepyklos vidurkis, pagamintu bandeliu per diena: {k3 / 5}')
+#
+# v1 = k1 / 5
+# v2 = k2 / 5
+# v3 = k3 / 5
+#
+# if v1 < v2 and v1 < v3:
+#     print(f'Pirma maziausiai: {v1}')
+# elif v2 < v3 and v2 < v1:
+#     print(f'Antra maziausiai: {v2}')
+# elif v3 < v2 and v3 < v1:
+#     print(f'Trecia maziausiai: {v3}')
 
-kepykla2 = {
-    "darbuotojų kiekis": 15,
-    "adresas": "Laisvės al. 10, Kaunas",
-    "kiekiai per savaite": {'Spurgos': 30,
-                'Sumustiniai': 10,
-                'Kruasanas': 35,
-                'Bandeles su aguonomis': 25,
-                'Bandele su persikais': 15,
-                'Bandele su sokoladu': 55,
-                'Sausainiai': 25
-                }
-}
+# 12
 
-kepykla3 = {
-    "darbuotojų kiekis": 20,
-    "adresas": "Taikos pr. 50, Klaipėda",
-    "kiekiai per savaite": {'Spurgos': 50,
-                'Sumustiniai': 30,
-                'Kruasanas': 40,
-                'Bandeles su aguonomis': 55,
-                'Bandele su persikais': 25,
-                'Bandele su sokoladu': 50,
-                'Sausainiai': 35
-                }
-}
+# 12.Susikurkite sąrašą, kuriame būtų saugomos skirtingos knygos (kaip
+# dictionary elementai). Apie kiekvieną knygą į atskirus knygų dictionary
+# sudėkite norimą informaciją (bent 3 savybes). Į list įdėkite bent 3 knygas.
 
 
-k1 = sum(kepykla1["kiekiai per savaite"].values())
-k2 = sum(kepykla2["kiekiai per savaite"].values())
-k3 = sum(kepykla3["kiekiai per savaite"].values())
+# Visas šias knygas išsiveskite. Tuomet parodykite pirmą knygą. Antros
+# knygos kažkurią savybę.
 
-if k1 * 1.5 > k2 * 1.5 > k3 * 1.5:
-    print(f'Pirma kepykla wins: {k1*1.5} kiekiu')
-if k1 * 1.5 > k3 * 1.5 > k2 * 1.5:
-    print(f'Pirma kepykla wins: {k2*1.5} kiekiu')
-if k3 * 1.5 > k2 * 1.5:
-    print(f'Trecia kepykla wins: {k3*1.5} kiekiu')
-else:
-    print(f'Antra kepykla wins: {k2*1.5} kiekiu')
+# knygos = [
+#     {
+#         "pavadinimas": "Pradžių pradžia",
+#         "autorius": "John Doe",
+#         "leidimo_metai": 1999,
+#         "zanras": "Fantastika",
+#         "puslapiu_skaicius": 350
+#     },
+#     {
+#         "pavadinimas": "Amžių paslaptys",
+#         "autorius": "Jane Smith",
+#         "leidimo_metai": 2015,
+#         "zanras": "Detektyvas",
+#         "puslapiu_skaicius": 280
+#     },
+#     {
+#         "pavadinimas": "Kelionė į nežinomybę",
+#         "autorius": "Emily Clark",
+#         "leidimo_metai": 2020,
+#         "zanras": "Nuotykių",
+#         "puslapiu_skaicius": 420
+#     }
+# ]
+#
+# # Atvaizduojamas sąrašas
+# for knyga in knygos:
+#     print(f"Pavadinimas: {knyga['pavadinimas']}, Autorius: {knyga['autorius']}, Leidimo metai: {knyga['leidimo_metai']}")
+#
+# print('Pirma knyga\n', knygos[1])
+#
+# print('Antros knygos autorius: ', knygos[1]['autorius'])
+#
+# # 13
+#
+# # 13.Susikurkite sąrašą, kuriame būtų keletas prekių (kaip dictionary V
+# # elementai) ir jį užpildykite pasirinktais duomenimis. V
+# # Išveskite visų prekių pavadinimus su kainomis ir dar kokiais nors atributais atskirose eilutėse.
 
-print(f'Pirmos kepyklos vidurkis, pagamintu bandeliu per diena: {k1 / 5}')
-print(f'Pirmos kepyklos vidurkis, pagamintu bandeliu per diena: {k2 / 5}')
-print(f'Pirmos kepyklos vidurkis, pagamintu bandeliu per diena: {k3 / 5}')
+# prekes = [
+#     {
+#         'pavadinimas': 'Telefonas',
+#         'kaina': 1000,
+#         'kiekis': 20
+#     },
+#     {
+#         'pavadinimas': 'Laptopas',
+#         'kaina': 2000,
+#         'kiekis': 40
+#     },
+#     {
+#         'pavadinimas': 'elektronine knyga',
+#         'kaina': 400,
+#         'kiekis': 12
+#     }
+# ]
+#
+# for preke in prekes:
+#     print(preke)
 
-v1 = k1 / 5
-v2 = k2 / 5
-v3 = k3 / 5
+# 14
 
-if v1 < v2 and v1 < v3:
-    print(f'Pirma maziausiai: {v1}')
-elif v2 < v3 and v2 < v1:
-    print(f'Antra maziausiai: {v2}')
-elif v3 < v2 and v3 < v1:
-    print(f'Trecia maziausiai: {v3}')
+# 14.Susikurkite sąrašą, kuriame būtų saugoma informacija apie keletą
+# automobilių (kaip dictionary elementai) ir užpildykite jį pasirinktais
+# duomenimis.
+# Išveskite kiekvieno automobilio pavadinimą, metus ir
+# paskaičiuotą jo amžių (dabartiniai metai - gamybos metai).
+
+cars = [
+    {
+        "marke": "Toyota",
+        "modelis": "Corolla",
+        "metai": 2018,
+        "spalva": "balta",
+        "kaina": 12000
+    },
+    {
+        "marke": "BMW",
+        "modelis": "X5",
+        "metai": 2020,
+        "spalva": "juoda",
+        "kaina": 35000
+    },
+    {
+        "marke": "Honda",
+        "modelis": "Civic",
+        "metai": 2016,
+        "spalva": "pilka",
+        "kaina": 9000
+    },
+    {
+        "marke": "Audi",
+        "modelis": "A4",
+        "metai": 2019,
+        "spalva": "raudona",
+        "kaina": 15000
+    },
+    {
+        "marke": "Ford",
+        "modelis": "Mustang",
+        "metai": 2021,
+        "spalva": "mėlyna",
+        "kaina": 45000
+    }
+]
+
+for car in cars:
+    print(cars[])
