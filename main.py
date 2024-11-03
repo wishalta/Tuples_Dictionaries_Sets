@@ -545,43 +545,48 @@ from traceback import print_tb
 # Išveskite kiekvieno automobilio pavadinimą, metus ir
 # paskaičiuotą jo amžių (dabartiniai metai - gamybos metai).
 
-cars = [
-    {
-        "marke": "Toyota",
-        "modelis": "Corolla",
-        "metai": 2018,
-        "spalva": "balta",
-        "kaina": 12000
-    },
-    {
-        "marke": "BMW",
-        "modelis": "X5",
-        "metai": 2020,
-        "spalva": "juoda",
-        "kaina": 35000
-    },
-    {
-        "marke": "Honda",
-        "modelis": "Civic",
-        "metai": 2016,
-        "spalva": "pilka",
-        "kaina": 9000
-    },
-    {
-        "marke": "Audi",
-        "modelis": "A4",
-        "metai": 2019,
-        "spalva": "raudona",
-        "kaina": 15000
-    },
-    {
-        "marke": "Ford",
-        "modelis": "Mustang",
-        "metai": 2021,
-        "spalva": "mėlyna",
-        "kaina": 45000
-    }
-]
+from datetime import date
 
-for car in cars:
-    print(cars[])
+# cars = [
+#     {
+#         "marke": "Toyota",
+#         "modelis": "Corolla",
+#         "metai": 2018,
+#         "spalva": "balta",
+#         "kaina": 12000
+#     },
+#     {
+#         "marke": "BMW",
+#         "modelis": "X5",
+#         "metai": 2020,
+#         "spalva": "juoda",
+#         "kaina": 35000
+#     },
+#     {
+#         "marke": "Honda",
+#         "modelis": "Civic",
+#         "metai": 2016,
+#         "spalva": "pilka",
+#         "kaina": 9000
+#     },
+#     {
+#         "marke": "Audi",
+#         "modelis": "A4",
+#         "metai": 2019,
+#         "spalva": "raudona",
+#         "kaina": 15000
+#     },
+#     {
+#         "marke": "Ford",
+#         "modelis": "Mustang",
+#         "metai": 2021,
+#         "spalva": "mėlyna",
+#         "kaina": 45000
+#     }
+# ]
+# amzius = 0
+#
+# for car in cars:
+#     print(f'Automobilio marke: {car['marke']}, metai: {car['metai']}')
+#     amzius = datetime.date.today().year - car['metai']
+#     print(f'Siam automobiliui: {amzius} metai')
