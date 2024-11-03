@@ -590,3 +590,133 @@ from datetime import date
 #     print(f'Automobilio marke: {car['marke']}, metai: {car['metai']}')
 #     amzius = datetime.date.today().year - car['metai']
 #     print(f'Siam automobiliui: {amzius} metai')
+
+# 15
+
+# 15.Susikurkite sąrašą, kuriame būtų saugoma keleto įmonių duomenys (kaip dictionary elementai) ir jį užpildykite duomenimis. V
+# Išveskite kiekvienos įmonės informaciją atskirose eilutėse, gražiai suformatuotai (sakinio pavidalu ar pan.). V
+# Taip pat, ką nors paskaičiuokite iš turimų skaitinių duomenų (pvz.: vidutinis įmonės amžius, darbuotojų kiekis per visas įmones, bendras pelnas, ar pan.). V
+
+# companies = [
+#     {
+#         'company_name': "Freor",
+#         'address': 'Katiliškių g. 92, Vilnius, 02212 Vilniaus m. sav.',
+#         'phone_number': '(0-5) 232 9188',
+#         'employers': 120
+#     },
+#     {
+#         'company_name': "Achema",
+#         'address': 'Jonava, Lietuva',
+#         'phone_number': '(0-5) 653 9188',
+#         'employers': 200
+#     },
+#     {
+#         'company_name': "maxima",
+#         'address': 'J. Sniadeckio g.',
+#         'phone_number': '0 800 20 050',
+#         'employers': 30
+#     }
+# ]
+#
+# employer_sum = 0
+#
+# for company in companies:
+#     print(f'Company: {company['company_name']} \nAddress: {company['address']}')
+#     print(f'Phone number: {company['phone_number']} \nEmployer number: {company['employers']}')
+#     print('-----------------------------')
+#     print(f'Company {company['company_name']}, located {company['address']}, the number of workers reach {company['employers']}. Number to contact {company['phone_number']}')
+#     employer_sum += company['employers']
+#
+# print(f'\nAverage number of employers: {employer_sum // len(companies)}')
+
+# 16
+
+# Susikurkite sąrašą, kuriame būtų saugoma informacija apie skirtingas ligonines (kaip dictionary elementai) ir užpildykite jį pasirinktais duomenimis. V
+# Išveskite ligoninių pavadinimus su adresais skirtingose eilutėse. V
+# Suskaičiuokite ką nors iš skaitinių jų duomenų, pvz.: bendrą lankytojų kiekį, bendrą ar vidutinį darbuotojų kiekį, ar pan.
+
+# hospitals = [
+#     {
+#         "clinic": "Vilniaus Antakalnio klinikinė ligoninė",
+#         "address": "Antakalnio g. 124, Vilnius, 10200 Vilniaus m. sav.",
+#         'employer_number': 105
+#     },
+#     {
+#         "clinic": "Vilniaus universiteto ligoninė Santaros klinikos",
+#         "address": "Santariškių g. 2, Vilnius, 08661 Vilniaus m. sav.",
+#         'employer_number': 150
+#     },
+#     {
+#         "clinic": "Mykolo Marcinkevičiaus ligoninė",
+#         "address": "Kauno g. 7, Vilnius, 03215 Vilniaus m. sav.",
+#         'employer_number': 135
+#     }
+# ]
+#
+# count = 0
+#
+# for info in hospitals:
+#     print(f'Clinic: {info["clinic"]} \nAddress: {info["address"]}')
+#     print('-----------------------------------')
+#     count += info["employer_number"]
+#
+# print(f'Total number of workers: {count}')
+
+# 17
+
+# Susikurkite sąrašą, kuriame būtų saugoma informacija apie keletą studentų (kaip dictionary elementai), kur apie kiekvieną studentą būtų žinoma ši informacija V
+# : vardas ir pavardė, amžius, pažymiai, studijų programa, kursas. V
+# Kiekvieną studentą išveskite taip: pirmoje eilutėje visi studento duomenys išskyrus jo pažymius, antroje eilutėje jo pažymiai, trečioje jo pažymių vidurkis su prierašu 'pažymių vidurkis'.
+# Išvedus visus studentus dėkite brūkšnį (pvz.: -----) ir išveskite bendrą visų studentų
+# pažymių vidurkį.
+
+students = [
+    {
+        'name': 'Mike',
+        'surname': 'Smith',
+        'age': 21,
+        'grades': [5, 3, 4, 3, 6, 9],
+        'study_program': 'economics',
+        'course': 3
+    },
+    {
+        'name': 'John',
+        'surname': 'Jackson',
+        'age': 19,
+        'grades': [7, 4, 9, 8, 9],
+        'study_program': 'medicine',
+        'course': 1
+    },
+    {
+        'name': 'Vitalik',
+        'surname': 'James',
+        'age': 24,
+        'grades': [8, 9, 10, 8, 9, 10],
+        'study_program': 'electric',
+        'course': 4
+    }
+]
+student_number = 0
+full_suma = 0
+final = 0
+
+for student in students:
+    print(f"{student['name'], student['surname'], student['age'], student['study_program'], student['course']}")
+    print(student['grades'])
+    count = 0
+    student_number += 1
+    for suma in student['grades']:
+        count += suma
+    print(f'Average grade: {count / len(student['grades'])}')
+    average = count / len(student['grades'])
+    full_suma += average
+    if len(students) == student_number:
+        print('-------------------------------------------------')
+        final = full_suma / student_number
+        print(f'All student average mark: {final:.2f}')
+
+    # print(f"Vidutinis pažymys: {average:.2f}") skaicia po kablelio apvalinami
+
+
+# Kiekvieną studentą išveskite taip: pirmoje eilutėje visi studento duomenys išskyrus jo pažymius, antroje eilutėje jo pažymiai, trečioje jo pažymių vidurkis su prierašu 'pažymių vidurkis'. V
+# Išvedus visus studentus dėkite brūkšnį (pvz.: -----) ir išveskite bendrą visų studentų pažymių vidurkį.
