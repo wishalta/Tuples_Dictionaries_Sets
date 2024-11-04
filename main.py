@@ -670,53 +670,115 @@ from datetime import date
 # Išvedus visus studentus dėkite brūkšnį (pvz.: -----) ir išveskite bendrą visų studentų
 # pažymių vidurkį.
 
-students = [
-    {
-        'name': 'Mike',
-        'surname': 'Smith',
-        'age': 21,
-        'grades': [5, 3, 4, 3, 6, 9],
-        'study_program': 'economics',
-        'course': 3
-    },
-    {
-        'name': 'John',
-        'surname': 'Jackson',
-        'age': 19,
-        'grades': [7, 4, 9, 8, 9],
-        'study_program': 'medicine',
-        'course': 1
-    },
-    {
-        'name': 'Vitalik',
-        'surname': 'James',
-        'age': 24,
-        'grades': [8, 9, 10, 8, 9, 10],
-        'study_program': 'electric',
-        'course': 4
-    }
-]
-student_number = 0
-full_suma = 0
-final = 0
-
-for student in students:
-    print(f"{student['name'], student['surname'], student['age'], student['study_program'], student['course']}")
-    print(student['grades'])
-    count = 0
-    student_number += 1
-    for suma in student['grades']:
-        count += suma
-    print(f'Average grade: {count / len(student['grades'])}')
-    average = count / len(student['grades'])
-    full_suma += average
-    if len(students) == student_number:
-        print('-------------------------------------------------')
-        final = full_suma / student_number
-        print(f'All student average mark: {final:.2f}')
+# students = [
+#     {
+#         'name': 'Mike',
+#         'surname': 'Smith',
+#         'age': 21,
+#         'grades': [5, 3, 4, 3, 6, 9],
+#         'study_program': 'economics',
+#         'course': 3
+#     },
+#     {
+#         'name': 'John',
+#         'surname': 'Jackson',
+#         'age': 19,
+#         'grades': [7, 4, 9, 8, 9],
+#         'study_program': 'medicine',
+#         'course': 1
+#     },
+#     {
+#         'name': 'Vitalik',
+#         'surname': 'James',
+#         'age': 24,
+#         'grades': [8, 9, 10, 8, 9, 10],
+#         'study_program': 'electric',
+#         'course': 4
+#     }
+# ]
+# student_number = 0
+# full_suma = 0
+# final = 0
+#
+# for student in students:
+#     print(f"{student['name'], student['surname'], student['age'], student['study_program'], student['course']}")
+#     print(student['grades'])
+#     count = 0
+#     student_number += 1
+#     for suma in student['grades']:
+#         count += suma
+#     print(f'Average grade: {count / len(student['grades'])}')
+#     average = count / len(student['grades'])
+#     full_suma += average
+#     if len(students) == student_number:
+#         print('-------------------------------------------------')
+#         final = full_suma / student_number
+#         print(f'All student average mark: {final:.2f}')
 
     # print(f"Vidutinis pažymys: {average:.2f}") skaicia po kablelio apvalinami
 
 
 # Kiekvieną studentą išveskite taip: pirmoje eilutėje visi studento duomenys išskyrus jo pažymius, antroje eilutėje jo pažymiai, trečioje jo pažymių vidurkis su prierašu 'pažymių vidurkis'. V
 # Išvedus visus studentus dėkite brūkšnį (pvz.: -----) ir išveskite bendrą visų studentų pažymių vidurkį.
+
+
+# 18
+
+# Susikurkite parduotuvės dictionary, kuriame būtų ši informacija: V
+# pavadinimas, adresas, darbuotojų kiekis, prekių sąrašas (kiekviena kaip dictionary elementas). V
+# Apie kiekvieną prekę parduotuvėje žinoma ši informacija: pavadinimas; kodas; kaina; savikaina; turimas kiekis. V
+# Išveskite parduotuvės bendrą informaciją, tuomet užrašą "prekės" ir atskirose eilutėse turimas prekes su kuria nors jų informacija
+# (pvz.: pavadinimai, kainos ir turimi kiekiai).
+# Galiausiai paskaičiuokite kiek iš viso parduotuvė turi visų prekių (sudėkite jų kiekius).
+# Raskite ir išveskite kurios prekės turima daugiausiai, o kurios mažiausiai.
+
+shop = {
+    "name": "Mano Parduotuvė",
+    "address": "Vilniaus g. 10, Vilnius",
+    "employers": 5,
+    "items": [
+        {
+            "product": "Duona",
+            "code": "A001",
+            "cost": 1.20,
+            "cost_for_company": 0.80,
+            "amount": 50
+        },
+        {
+            "product": "Pienas",
+            "code": "A002",
+            "cost": 0.90,
+            "cost_for_company": 0.60,
+            "amount": 30
+        },
+        {
+            "product": "Kava",
+            "code": "A003",
+            "cost": 5.50,
+            "cost_for_company": 3.00,
+            "amount": 20
+        }
+    ]
+}
+
+print(f'Shop name: {shop['name']}, address {shop['address']}, number of workers {shop['employers']}')
+
+count = 0
+
+for stuff in shop['items']:
+    print(f'Product: {stuff['product']}, with amount of {stuff['amount']}. Cost for buyer {stuff['cost']}$')
+    count += stuff['amount']
+
+max_amount = max(item['amount'] for item in shop['items'])
+print(max_amount)
+min_amount = min(item['amount'] for item in shop['items'])
+print(min_amount)
+
+
+# Išveskite parduotuvės bendrą informaciją, tuomet užrašą "prekės" ir atskirose eilutėse turimas prekes su kuria nors jų informacija V
+# (pvz.: pavadinimai, kainos ir turimi kiekiai). V
+# Galiausiai paskaičiuokite kiek iš viso parduotuvė turi visų prekių (sudėkite jų kiekius). V
+# Raskite ir išveskite kurios prekės turima daugiausiai, o kurios mažiausiai.
+
+
+
